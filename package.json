@@ -1,0 +1,18 @@
+{
+  "name": "chaturvedi.org",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JedWatson/keystone-demo.git"
+  },
+  "dependencies": {
+    "async": "^1.5.0",
+    "csv": "^0.4.6",
+    "keystone": "github:keystonejs/keystone",
+    "lodash": "^3.10.1"
+  },
+  "scripts": {
+    "start": "node keystone.js"
+  }
+}
