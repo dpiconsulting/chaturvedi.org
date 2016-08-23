@@ -1,0 +1,41 @@
+extends ../layouts/default
+
+block css
+	link(rel="stylesheet", href="/js/lib/fancybox/jquery.fancybox.css")
+				
+block content
+	.page-header
+		a(href='/keystone/users?new').btn.btn-default.pull-right= user ? 'Register' : 'Sign in to Register'
+		h1 Site Members
+
+	if members.length
+		each member, i in members
+			h3
+				| #{member.name.first} 
+				small.text-muted= member.name.last
+			
+			.row
+				//- each image, i in member.images
+				//- 	.col-xs-4.col-sm-3.col-md-2(style="margin-bottom: 30px;")
+				//- 		a(href=image.limit(900,600), title=member.name + ' image ' + (i+1), rel=member.key).member-image
+				//- 			img(src=image.fill(300,300), alt=member.name + ' image ' + (i+1)).img-thumbnail
+		
+	else
+		.jumbotron.text-center
+			h3(style="margin-bottom:0;margin-top:0;") There are no albums yet.
+
+
+block page-js
+	script(src="/js/lib/fancybox/jquery.fancybox.pack.js")
+	script.
+		jQuery(function($) {
+			$('.member-image').fancybox({
+				prevEffect: 'none',
+				nextEffect: 'none',
+				closeBtn: false,
+				helpers: {
+					titl: {},
+					buttons: {}
+				}
+			});
+		});
