@@ -5,6 +5,7 @@ var Gallery = new keystone.List('Gallery', {
 	autokey: { from: 'name', path: 'key', unique: true },
 	plural: 'Albums',
 	singular: 'Album',
+	hidden: true
 });
 
 Gallery.add({

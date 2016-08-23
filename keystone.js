@@ -2,8 +2,8 @@ var keystone = require('keystone');
 
 keystone.init({
 
-	'name': 'Keystone Demo',
-	'brand': 'Demo',
+	'name': 'chaturvedi.org',
+	'brand': 'chaturvedi.org',
 
 	'favicon': 'public/favicon.ico',
 	'less': 'public',
@@ -47,7 +47,7 @@ keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
 	'posts': ['posts', 'post-comments', 'post-categories'],
-	'galleries': 'galleries',
+	// 'galleries': 'galleries',
 	'enquiries': 'enquiries',
 	'users': 'users',
 	'field-tests': 'things'
