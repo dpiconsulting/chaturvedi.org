@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "async": "^1.5.0",
+    "connect-mongo": "^1.3.2",
     "csv": "^0.4.6",
     "keystone": "github:keystonejs/keystone",
     "lodash": "^3.10.1"
